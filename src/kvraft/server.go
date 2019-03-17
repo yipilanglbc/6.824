@@ -1,10 +1,10 @@
 package raftkv
 
 import (
-	"labgob"
-	"labrpc"
+	"github.com/yipilanglbc/6.824/src/labgob"
+	"github.com/yipilanglbc/6.824/src/labrpc"
+	"github.com/yipilanglbc/6.824/src/raft"
 	"log"
-	"raft"
 	"sync"
 )
 

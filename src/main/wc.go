@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mapreduce"
+	"github.com/yipilanglbc/6.824/src/mapreduce"
 	"os"
 )
 

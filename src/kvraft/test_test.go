@@ -1,6 +1,6 @@
 package raftkv
 
-import "linearizability"
+import "github.com/yipilanglbc/6.824/src/linearizability"
 
 import "testing"
 import "strconv"
