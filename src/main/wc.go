@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"github.com/yipilanglbc/6.824/src/mapreduce"
 	"os"
+	"strconv"
+	"strings"
+	"unicode"
 )
 
 //
@@ -15,6 +18,22 @@ import (
 //
 func mapF(filename string, contents string) []mapreduce.KeyValue {
 	// Your code here (Part II).
+	keyNum := make(map[string]int)
+	data := strings.FieldsFunc(contents, func(r rune) bool {
+		return !unicode.IsLetter(r)
+	})
+	for _, w := range data{
+		if _, ok := keyNum[w]; ok{
+			keyNum[w]++
+		}else{
+				keyNum[w] = 1
+		}
+	}
+	var res []mapreduce.KeyValue
+	for k, v := range keyNum{
+		res = append(res, mapreduce.KeyValue{k, strconv.Itoa(v)})
+	}
+	return res
 }
 
 //
@@ -24,6 +43,15 @@ func mapF(filename string, contents string) []mapreduce.KeyValue {
 //
 func reduceF(key string, values []string) string {
 	// Your code here (Part II).
+	sum := 0
+	for _, s := range values{
+		num, err := strconv.Atoi(s)
+		if err != nil{
+			fmt.Printf("strconv error %s", err)
+		}
+		sum += num
+	}
+	return strconv.Itoa(sum)
 }
 
 // Can be run in 3 ways:
