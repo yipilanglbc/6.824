@@ -2,6 +2,7 @@ package mapreduce
 
 import (
 	"encoding/json"
+	"io"
 	"os"
 	"sort"
 )
@@ -19,7 +20,13 @@ func doReduce(
 		if err != nil{
 			debug("Open file error: %s\n", err)
 		}
-		defer imF.Close()
+		if imF != nil{
+			defer func(f io.Closer){
+				if err := f.Close(); err != nil{
+					debug("Close file error: %v\n", err)
+				}
+			}(imF)
+		}
 		dec := json.NewDecoder(imF)
 		for {						//千万不能写成 for err != nil{}
 			var kv KeyValue

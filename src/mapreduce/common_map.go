@@ -3,6 +3,7 @@ package mapreduce
 import (
 	"encoding/json"
 	"hash/fnv"
+	"io"
 	"io/ioutil"
 	"os"
 )
@@ -25,7 +26,13 @@ func doMap(
 		if err != nil{
 			debug("Create file error: %s\n", err)
 		}
-		defer imFile.Close()
+		if imFile != nil{
+			defer func(f io.Closer){
+				if err := f.Close(); err != nil{
+					debug("Close file error: %v\n", err)
+				}
+			}(imFile)
+		}
 		enc := json.NewEncoder(imFile)
 		encs = append(encs, enc)
 	}
