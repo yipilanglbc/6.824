@@ -42,10 +42,13 @@ func schedule(jobName string, mapFiles []string, nReduce int, phase jobPhase, re
 		}
 		go func() {
 			defer wg.Done()
-			worker := <-registerChan
-			done := call(worker, "Worker.DoTask", &doTaskArgs, nil)
-			if done{
-				go func() {registerChan<- worker}()
+			for {
+				worker := <-registerChan
+				done := call(worker, "Worker.DoTask", &doTaskArgs, nil)
+				if done {
+					go func() { registerChan <- worker }()
+					break
+				}
 			}
 		}()
 	}
