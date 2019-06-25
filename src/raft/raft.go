@@ -49,6 +49,7 @@ type ApplyMsg struct {
 type LogEntry struct{
 	Cmd interface{}
 	Term int
+	//TODO index int ?
 }
 
 type State int
@@ -60,6 +61,7 @@ const (
 	Follower
 	Candidate
 	voteNull = -1
+	conflictNull = -1
 	electionTimeoutFloor = 700
 	electionTimeoutCeil = 1000
 	heartBeatInterval = 150
@@ -162,7 +164,6 @@ type RequestVoteArgs struct {				//RPC	- the method's type is exported.
 											//		- the method's second argument is a pointer.
 											//		- the method has return type error.
 	// Your data here (2A, 2B).
-	//TODO
 	Term int
 	CandidateId int
 	LastLogIndex int
@@ -191,6 +192,7 @@ type RequestVoteReply struct {
 type AppendEntriesReply struct{
 	Term int
 	Success bool
+	ConflictFirstIndex int
 }
 
 func (rf *Raft) upToDate(lastLogTerm int, lastLogIndex int) bool{
@@ -209,39 +211,45 @@ func (rf *Raft) upToDate(lastLogTerm int, lastLogIndex int) bool{
 // example RequestVote RPC handler.
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
-	defer un(trace(rf.me, rf.state, rf.currentTerm,"RequestVote()"))
-
-	// Your code here (2A, 2B).
 	rf.mu.Lock()
-	if args.Term < rf.currentTerm{
-		reply.Term = rf.currentTerm					//for candidate to update itself
-		rf.mu.Unlock()
-		reply.VoteGranted = false
+	defer rf.mu.Unlock()
+	defer un(trace(rf.me, rf.state, rf.currentTerm,"RequestVote()"))
+	// Your code here (2A, 2B).
+	reply.Term = rf.currentTerm						//for candidate to update itself
+	reply.VoteGranted = false
+	if args.Term < rf.currentTerm{					// receiver rules #1
 		return
 	}
 	if args.Term > rf.currentTerm{					//severs' rules #2
 		rf.convertToFollower(args.Term)
 	}
-	reply.Term = rf.currentTerm						//for candidate to update itself
-	reply.VoteGranted = false
-	if rf.votedFor == voteNull || rf.votedFor == args.CandidateId && rf.upToDate(args.LastLogTerm, args.LastLogIndex){
+	//TODO need modify
+	if rf.votedFor == voteNull || rf.votedFor == args.CandidateId && rf.upToDate(args.LastLogTerm, args.LastLogIndex){ // receiver rules #2
 		rf.votedFor = args.CandidateId
 		reply.VoteGranted = true
 		dropAndNotify(rf.me, rf.state, rf.currentTerm, rf.chanGrantVote, "chanGrantVote")				//reset the electionTimeoutTimer
 	}
-	rf.mu.Unlock()
 }
 
 func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply){
 	rf.mu.Lock()
+	defer rf.mu.Unlock()
 	defer un(trace(rf.me, rf.state, rf.currentTerm,"AppendEntries()"))
+	reply.ConflictFirstIndex = conflictNull
+	reply.Term = rf.currentTerm
+	reply.Success = false
 	lastLogIndex := len(rf.log)-1
-	if args.Term < rf.currentTerm || args.PrevLogIndex > lastLogIndex ||
-		rf.log[args.PrevLogIndex].Term != args.PrevLogTerm {			// Receiver implementation #1,#2
-		reply.Term = rf.currentTerm
-		reply.Success = false
-		rf.mu.Unlock()
+	if args.Term < rf.currentTerm{			// Receiver implementation #1
 		return
+	}
+	if args.PrevLogIndex > lastLogIndex{	// treat as if you did have that entry but the term did not match
+		reply.ConflictFirstIndex = lastLogIndex + 1
+		return
+	}
+	if rf.log[args.PrevLogIndex].Term != args.PrevLogTerm{						// Receiver implementation #2 && optimized to reduce the number of rejected AppendEntries RPCs
+		i, term := args.PrevLogIndex-1, rf.log[args.PrevLogIndex].Term
+		for ; rf.log[i].Term == term; i--{}
+		reply.ConflictFirstIndex = i + 1
 	}
 	if args.Term >= rf.currentTerm{										//rule for all severs #2 && candidate receive an AppendRPC
 		rf.convertToFollower(args.Term)
@@ -257,12 +265,11 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 	if args.PrevLogIndex+len(args.Entries) > lastLogIndex{				// Receiver implementation #4
 		rf.log = append(rf.log[:args.PrevLogIndex+1], args.Entries...)
 	}
-	if args.LeaderCommit > rf.commitIndex{
+	if args.LeaderCommit > rf.commitIndex{								// Receiver implementation #5
 		rf.commitIndex = min(args.LeaderCommit, lastLogIndex)
+		rf.apply()
 	}
 	reply.Success = true
-	reply.Term = rf.currentTerm
-	rf.mu.Unlock()
 }
 //
 // example code to send a RequestVote RPC to a server.
@@ -319,8 +326,16 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
 	isLeader := true
 
 	// Your code here (2B).
-
-
+	rf.mu.Lock()
+	defer rf.mu.Unlock()
+	if rf.state != Leader{
+		isLeader = false
+	}else{
+		term = rf.currentTerm
+		index = len(rf.log)
+		newLogEntry := LogEntry{command, term}
+		rf.log = append(rf.log, newLogEntry)
+	}
 	return index, term, isLeader
 }
 
@@ -394,7 +409,7 @@ func (rf *Raft) stateChange() {
 		rf.mu.Unlock()
 		switch state {
 		case Leader:
-			rf.heartBeat()
+			rf.sendAppendEntries()
 			time.Sleep(heartBeatInterval * time.Millisecond)
 		case Candidate:
 			go rf.election()
@@ -447,46 +462,81 @@ func (rf *Raft) convertToFollower(term int){
 	rf.state = Follower
 	rf.votedFor = voteNull
 }
-
-func (rf *Raft) heartBeat(){
+func (rf *Raft) apply(){
+	for ; rf.commitIndex > rf.lastApplied; rf.lastApplied++{
+		applyMessage := ApplyMsg{
+			true,
+			rf.log[rf.lastApplied+1].Cmd,
+			rf.lastApplied + 1,
+		}
+		rf.applyCh <- applyMessage
+	}
+}
+func (rf *Raft) advanceCommitIndex(){
+	N := len(rf.log)-1				//rules for Leaders #4
+	for ; N > rf.commitIndex; N--{
+		num := 0
+		for i, n := 0, len(rf.peers); i < n; i++{
+			if rf.matchIndex[i] >= N{
+				num++
+			}
+		}
+		if num > len(rf.peers)/2 && rf.log[N].Term == rf.currentTerm{
+			rf.commitIndex = N
+			//TODO 通知 applier goroutine, sync.Cond
+			rf.apply()
+			break
+		}
+	}
+}
+func (rf *Raft) sendAppendEntries(){
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
 	defer un(trace(rf.me, rf.state, rf.currentTerm,"heatBeat()"))
-	if rf.state != Leader{
-		return
-	}
 	entries := make([]LogEntry, 0)
 	args := AppendEntriesArgs{
-		rf.currentTerm,
-		rf.me,
-		len(rf.log) - 1,
-		rf.log[len(rf.log)-1].Term,
-		entries,
-		rf.commitIndex,
+		Term: rf.currentTerm,
+		LeaderId:rf.me,
+		Entries:entries,
+		LeaderCommit: rf.commitIndex,
 	}
 	for i, peer := range rf.peers{
 		if i != rf.me{
 			DPrintf("ask peer %v call AppendEntries without entries out of go func\n", i)
-
 			go func(args AppendEntriesArgs, peer *labrpc.ClientEnd, peerNum int){
+				rf.mu.Lock()
+				if rf.state != Leader{
+					rf.mu.Unlock()
+					return
+				}
+				args.PrevLogIndex = rf.nextIndex[peerNum] - 1				//including rules for Leaders #3 && heartBeat
+				args.PrevLogTerm = rf.log[args.PrevLogIndex].Term
+				args.Entries = append(args.Entries, rf.log[rf.nextIndex[peerNum]:len(rf.log)]...)
+				rf.mu.Unlock()
 				reply := AppendEntriesReply{}
-				//TODO
-				for{
-					ok := peer.Call("Raft.AppendEntries", &args, &reply)
-					if ok{
-						break
-					}
+				//for{
+				//	ok := peer.Call("Raft.AppendEntries", &args, &reply)
+				//	if ok{
+				//		break
+				//	}
+				//}
+				ok := peer.Call("Raft.AppendEntries", &args, &reply)
+				if !ok{
+					return
 				}
 				DPrintf("break for, ask peer %v call AppendEntries without entries in go func\n", peerNum)
-
 				rf.mu.Lock()
 				if args.Term == rf.currentTerm{					//drop old rpc reply
 					if !reply.Success{
 						if reply.Term > rf.currentTerm{
 							rf.convertToFollower(reply.Term)
-						}else{
-							DPrintf("part2\n")
+						}else{									//rules for Leaders #3.2
+							rf.nextIndex[peerNum] = reply.ConflictFirstIndex
 						}
+					}else{										//rules for Leaders #3.1
+						rf.matchIndex[peerNum] = args.PrevLogIndex + len(args.Entries)
+						rf.nextIndex[peerNum] = rf.matchIndex[peerNum] + 1
+						rf.advanceCommitIndex()
 					}
 				}
 				rf.mu.Unlock()
@@ -499,9 +549,6 @@ func (rf *Raft) election(){
 	rf.mu.Lock()
 	defer rf.mu.Unlock()
 	defer un(trace(rf.me, rf.state, rf.currentTerm,"election()"))
-	if rf.state != Candidate{
-		return
-	}
 	args := RequestVoteArgs{			//args要先确定，不能在go func中确定，否则参数可能不是此时的状态
 		rf.currentTerm,
 		rf.me,
@@ -511,38 +558,46 @@ func (rf *Raft) election(){
 	for i, peer := range rf.peers{
 		if i != rf.me{
 			DPrintf("ask peer %v call requestVote out of go func\n", i)
-
 			go func(args RequestVoteArgs, peer *labrpc.ClientEnd, peerNum int){			//这种匿名函数最好复制来自于外部的变量作为参数，否则可能会引用过时的变量
-				reply := RequestVoteReply{}
-				//TODO
-				for{
-					ok := peer.Call("Raft.RequestVote", &args, &reply)
-					if ok {
-						break
-					}
-				}
-				DPrintf("break for, ask peer %v call requestVote in go func\n", peerNum)
-
-				rf.mu.Lock()
-				if args.Term == rf.currentTerm{						//drop old rpc reply
-					if reply.VoteGranted{
-						rf.voteCount++
-						if rf.voteCount >= (len(rf.peers)+1)/2{
-							rf.convertToLeader()
-							dropAndNotify(i, rf.state, rf.currentTerm, rf.chanLeaderElected, "chanLeaderElected")		//无阻塞,reset the electionTimeoutTimer
-						}
-					}else if reply.Term > rf.currentTerm{			//rule for all severs #2
-						rf.convertToFollower(reply.Term)
-					}
-				}
+			rf.mu.Lock()
+			if rf.state != Candidate{
 				rf.mu.Unlock()
+				return
+			}
+			rf.mu.Unlock()
+			reply := RequestVoteReply{}
+			//for{
+			//	ok := peer.Call("Raft.RequestVote", &args, &reply)
+			//	if ok {
+			//		break
+			//	}
+			//}
+			ok := peer.Call("Raft.RequestVote", &args, &reply)
+			if !ok {//TODO 另起一个goroutine发送RPC？
+				return
+			}
+			DPrintf("break for, ask peer %v call requestVote in go func\n", peerNum)
+			rf.mu.Lock()
+			if args.Term == rf.currentTerm{						//drop old rpc reply
+				if reply.VoteGranted{
+					rf.voteCount++
+					if rf.voteCount > len(rf.peers)/2{
+						rf.convertToLeader()
+						dropAndNotify(i, rf.state, rf.currentTerm, rf.chanLeaderElected, "chanLeaderElected")		//无阻塞,reset the electionTimeoutTimer
+					}
+					//TODO need modify
+				}else if reply.Term > rf.currentTerm{			//rule for all severs #2
+					rf.convertToFollower(reply.Term)
+				}
+			}
+			rf.mu.Unlock()
 			}(args, peer, i)
 		}
 	}
 }
 func dropAndNotify(peerNum int, state State, term int, c chan Notify, name string){
 	defer un(trace(peerNum, state, term, "dropAndNotify("+name+")"))
-	select {//保证channel可写入
+	select {														//保证channel可写入
 	case <-c:
 	default:
 	}

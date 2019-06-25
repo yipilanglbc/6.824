@@ -1,602 +1,600 @@
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.4  3  117    0
+  ... Passed --   5.9  3  136    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.085s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.539s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.4  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.5  3  190    0
+  ... Passed --   5.5  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.984s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.970s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.6  3  189    0
+  ... Passed --   5.6  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.071s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.146s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.3  3  106    0
+  ... Passed --   6.2  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.849s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.765s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.6  3   96    0
+  ... Passed --   5.4  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.151s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.911s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.7  3  137    0
+  ... Passed --   6.0  3  140    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.426s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.502s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3   92    0
+  ... Passed --   5.6  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.105s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.104s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.9  3  124    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.495s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.068s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.5  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.6  3  174    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.637s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.074s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.1  3  123    0
+  ... Passed --   6.1  3  144    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.698s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.639s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --  10.6  3  226    0
+  ... Passed --   5.4  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	14.326s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.893s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.8  3   91    0
+  ... Passed --   5.5  3  130    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.394s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.087s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   9.6  3  225    0
+  ... Passed --   5.5  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	13.168s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.073s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   5.9  3  112    0
+  ... Passed --   5.6  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.460s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.090s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.2  3  120    0
+  ... Passed --   5.6  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.737s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.136s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.4  3   54    0
 Test (2A): election after network failure ...
-  ... Passed --   5.6  3  102    0
+  ... Passed --   5.5  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.197s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.878s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.8  3  103    0
+  ... Passed --   5.6  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.526s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.094s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.7  3  110    0
+  ... Passed --   6.1  3  144    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.221s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.678s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.6  3  122    0
+  ... Passed --   5.5  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.197s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.088s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.0  3   97    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.526s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.068s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.7  3  147    0
+  ... Passed --   5.6  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.377s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.143s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.5  3  114    0
+  ... Passed --   5.8  3  130    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.094s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.354s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.0  3  119    0
+  ... Passed --   6.0  3  136    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.520s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.521s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.4  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   6.5  3  140    0
+  ... Passed --   5.7  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.168s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.158s
 Test (2A): initial election ...
-  ... Passed --   3.7  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.7  3   85    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.360s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.017s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   8.3  3  169    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.914s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.034s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.1  3  101    0
+  ... Passed --   5.5  3  116    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.583s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.064s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.2  3  123    0
+  ... Passed --   5.4  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.686s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.924s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.6  3   90    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.605s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.063s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.1  3  131    0
+  ... Passed --   5.6  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.671s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.134s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.8  3  152    0
+  ... Passed --   5.6  3  130    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.269s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.069s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   6.3  3  117    0
+  ... Passed --   5.4  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.850s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.942s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   54    0
 Test (2A): election after network failure ...
-  ... Passed --   5.7  3  108    0
+  ... Passed --   5.4  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.601s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.964s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.6  3  189    0
+  ... Passed --   5.9  3  137    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.290s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.372s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.2  3  111    0
+  ... Passed --   6.0  3  144    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.770s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.593s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
---- FAIL: TestReElection2A (7.18s)
-    config.go:326: expected one leader, got none
-FAIL
-exit status 1
-FAIL	github.com/yipilanglbc/6.824/src/raft	10.748s
+  ... Passed --   6.1  3  146    0
+PASS
+ok  	github.com/yipilanglbc/6.824/src/raft	9.661s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --  10.4  3  253    0
+  ... Passed --   5.5  3  116    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	14.066s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.065s
 Test (2A): initial election ...
-  ... Passed --   3.7  3   42    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   5.4  3   99    0
+  ... Passed --   5.9  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.089s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.461s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.3  3  146    0
+  ... Passed --   6.0  3  140    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.925s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.607s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3  105    0
+  ... Passed --   5.5  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.169s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.100s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.3  3  109    0
+  ... Passed --   6.0  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.820s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.561s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   5.6  3   95    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.174s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.914s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.9  3  112    0
+  ... Passed --   5.4  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.426s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.948s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3   91    0
+  ... Passed --   5.5  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.135s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.097s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.4  3  153    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.979s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.976s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   7.5  3  161    0
+  ... Passed --   5.6  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.026s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.083s
 Test (2A): initial election ...
-  ... Passed --   3.4  3   38    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.5  3  127    0
+  ... Passed --   5.6  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.918s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.149s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   9.3  3  206    0
+  ... Passed --   5.9  3  132    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.806s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.465s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3  107    0
+  ... Passed --   5.6  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.096s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.149s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   7.1  3  145    0
+  ... Passed --   6.1  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.697s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.511s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.8  3  191    0
+  ... Passed --   5.5  3  130    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.303s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.039s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.7  3   97    0
+  ... Passed --   5.5  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.338s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.032s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   7.0  3  126    0
+  ... Passed --   5.5  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.531s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.036s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3  106    0
+  ... Passed --   6.0  3  142    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.126s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.503s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.7  3  104    0
+  ... Passed --   6.0  3  140    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.181s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.443s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.1  3  140    0
+  ... Passed --   6.0  3  140    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.689s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.548s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   6.2  3  107    0
+  ... Passed --   5.4  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.737s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.865s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.5  3  193    0
+  ... Passed --   5.6  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.165s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.088s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.5  3  138    0
+  ... Passed --   5.7  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.052s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.177s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.2  3  110    0
+  ... Passed --   5.6  3  126    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.831s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.117s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.6  3  109    0
+  ... Passed --   5.5  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.206s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.039s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.7  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   8.2  3  166    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.681s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.046s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.7  3  131    0
+  ... Passed --   6.0  3  134    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.273s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.438s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.7  3  109    0
+  ... Passed --   5.4  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.371s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.038s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   6.7  3  123    0
+  ... Passed --   6.0  3  142    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.541s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.546s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.3  3  143    0
+  ... Passed --   5.7  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.816s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.241s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   7.1  3  131    0
+  ... Passed --   5.6  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.723s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.158s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   9.0  3  179    0
+  ... Passed --   5.6  3  130    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.624s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.181s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.6  3  100    0
+  ... Passed --   5.5  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.306s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.036s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   7.3  3  146    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.938s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.843s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   8.6  3  187    0
+  ... Passed --   6.0  3  140    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.198s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.608s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   38    0
+  ... Passed --   3.5  3   54    0
 Test (2A): election after network failure ...
-  ... Passed --   6.1  3  114    0
+  ... Passed --   5.5  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.834s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.955s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.7  3  120    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.378s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.045s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.7  3   62    0
 Test (2A): election after network failure ...
-  ... Passed --   9.1  3  190    0
+  ... Passed --   5.9  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.657s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.529s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.5  3  133    0
+  ... Passed --   5.5  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.110s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.070s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3   88    0
+  ... Passed --   5.4  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.000s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.011s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.1  3  165    0
+  ... Passed --   5.4  3  116    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.679s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.940s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   5.8  3  104    0
+  ... Passed --   5.4  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.341s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.027s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.0  3  169    0
+  ... Passed --   6.1  3  142    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.538s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.679s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.4  3  109    0
+  ... Passed --   5.4  3  116    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.941s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.009s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   8.1  3  166    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.664s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.099s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.4  3   90    0
+  ... Passed --   6.0  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.079s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.607s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   8.8  3  185    0
+  ... Passed --   6.0  3  140    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.306s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.500s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.6  3   89    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.180s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.044s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.8  3  135    0
+  ... Passed --   5.5  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.396s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.124s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   8.9  3  196    0
+  ... Passed --   5.5  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.474s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.055s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.4  3  108    0
+  ... Passed --   5.9  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.066s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.502s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.6  3  112    0
+  ... Passed --   5.5  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.195s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.146s
 Test (2A): initial election ...
-  ... Passed --   3.7  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   8.3  3  152    0
+  ... Passed --   5.7  3  125    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.026s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.241s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   6.2  3  109    0
+  ... Passed --   5.5  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.924s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.005s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.5  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   8.4  3  176    0
+  ... Passed --   5.5  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	12.127s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.008s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.1  3  142    0
+  ... Passed --   5.9  3  134    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.694s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.481s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   7.3  3  149    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.807s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.017s
 Test (2A): initial election ...
-  ... Passed --   3.5  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.7  3  127    0
+  ... Passed --   5.9  3  138    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.234s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.508s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.6  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   5.5  3   89    0
+  ... Passed --   5.4  3  120    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.028s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.987s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   40    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.3  3  103    0
+  ... Passed --   5.4  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.955s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.013s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.9  3  113    0
+  ... Passed --   5.5  3  122    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.455s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.088s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   42    0
+  ... Passed --   3.5  3   58    0
 Test (2A): election after network failure ...
-  ... Passed --   6.2  3  106    0
+  ... Passed --   5.4  3  118    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	9.796s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.922s
 Test (2A): initial election ...
-  ... Passed --   3.7  3   42    0
+  ... Passed --   3.6  3   56    0
 Test (2A): election after network failure ...
-  ... Passed --   7.0  3  140    0
+  ... Passed --   5.4  3  124    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	11.031s
+ok  	github.com/yipilanglbc/6.824/src/raft	8.946s
 Test (2A): initial election ...
-  ... Passed --   3.6  3   38    0
+  ... Passed --   3.6  3   60    0
 Test (2A): election after network failure ...
-  ... Passed --   6.6  3  115    0
+  ... Passed --   5.5  3  128    0
 PASS
-ok  	github.com/yipilanglbc/6.824/src/raft	10.291s
+ok  	github.com/yipilanglbc/6.824/src/raft	9.087s
